@@ -12,8 +12,13 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    float w = 100;
+    float h = 100;
+    float cx = ofGetWindowWidth()/2;
+    float cy = ofGetWindowHeight()/2;
+    
     ofSetColor(255,0,0);
-    ofDrawRectangle(100,100,100,100);
+    ofDrawRectangle(cx-w/2,cy-h/2,w,h);
 }
 
 //--------------------------------------------------------------
