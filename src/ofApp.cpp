@@ -3,17 +3,26 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofBackground(255, 255, 255);
+    
+    rotAngle = 0.0;
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-
+    rotAngle = rotAngle + 0.5;
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    float w = 100;
+    float h = 100;
+    float cx = ofGetWindowWidth()/2;
+    float cy = ofGetWindowHeight()/2;
+    
     ofSetColor(255,0,0);
-    ofDrawRectangle(0,0,100,100);
+    ofTranslate(cx,cy);
+    ofRotate(rotAngle);
+    ofDrawRectangle(-w/2,-h/2,w,h);
 }
 
 //--------------------------------------------------------------
